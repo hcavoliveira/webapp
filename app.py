@@ -46,4 +46,4 @@ if start_button:
     st.session_state['df_experiment_results'] = \
         st.sessions_state['df_experiment_results'].reset_index(drop=True)
 
-st.write(st.sessions_state['df_experiment_results')
+st.write(st.sessions_state['df_experiment_results'])
