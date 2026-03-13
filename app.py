@@ -1,7 +1,8 @@
+import time
 import pandas as pd
 import scipy.stats
 import streamlit as st
-import time
+
 
 if 'experiment_no' not in st.session_state:
     st.session_state['experiment_no'] = 0
@@ -39,7 +40,8 @@ if start_button:
     mean = toss_coin(number_of_trials)
     st.session_state['df_experiment_results'] = pd.concat([
         st.session_state['df_experiment_results'],
-        pd.DataFrame(data=[[st.session_state['experiment_no'], number_of_trials, mean]], columns=['no', 'iterations', 'mean'])
+        pd.DataFrame(data=[[st.session_state['experiment_no'], number_of_trials, mean]],
+                     columns=['no', 'iterations', 'mean'])
 
     ],
     axis=0)
